@@ -59,5 +59,5 @@ function generatePassword(responseObject) {
     password = password.concat(randomCharacter);
   }
 
-  return password
+  return password.join('')
 }
