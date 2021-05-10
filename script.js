@@ -36,3 +36,28 @@ function passwordPrompts() {
   }
   return responseObject;
 }
+
+// This function will generate a randon password
+function generatePassword(responseObject) {
+  var userSelection = [];
+  var password = [];
+  if (responseObject.numericValue === true) {
+    userSelection = userSelection.concat(numbers);
+  }
+  if (responseObject.lowerCase === true) {
+    userSelection = userSelection.concat(lowerCaseLetter);
+  }
+  if (responseObject.upperCase === true) {
+    userSelection = userSelection.concat(upperCaseLetter);
+  }
+  if (responseObject.specialChars === true) {
+    userSelection = userSelection.concat(spclChars);
+  }
+
+  for (var i = 0; i < responseObject.userInput; i++) {
+    var randomCharacter = userSelection[Math.floor(Math.random() * userSelection.length)];
+    password = password.concat(randomCharacter);
+  }
+
+  return password
+}
