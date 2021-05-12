@@ -20,9 +20,9 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Writing a function fro user password prompts and returning an object responseOblect
+// Writing a function from user password prompts and returning an object responseOblect
 function passwordPrompts() {
-  var userInput = prompt("How many characters would you like to have?");
+  var userInput = prompt("Please choose a length of at least 8 characters and no more than 128 characters.");
   var lowerCase = confirm("Would you like to include lowercase letter?");
   var upperCase = confirm("Would you like to include uppercase letter?");
   var numericValue = confirm("Would you like to include numeric value?");
